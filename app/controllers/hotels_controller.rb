@@ -5,6 +5,12 @@ class HotelsController < ApplicationController
   
   def show
     @hotel = Hotel.find(params[:id])
+    if !@hotel.gallery
+      @gallery = Gallery.new
+      @gallery.galleriable = @hotel
+    else
+      @gallery_item = @hotel.gallery.gallery_items.new
+    end
   end
   
   def new

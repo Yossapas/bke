@@ -25,6 +25,23 @@
   <%= @hotel.fax %>
 </p>
 
+<% if !@hotel.gallery %>
+  
+  <%= render :partial => '/galleries/form.html.erb' %>
+
+<% else%>
+  
+  <% @hotel.gallery.gallery_items.each do |gallery_item| %>
+  
+    <%= image_tag gallery_item.photo.url(:small) %>
+    
+  <% end %>
+  
+  <h3>Add Photo:</h3>
+  <%= render :partial => '/gallery_items/form.html.erb' %>
+
+<% end %>
+
 <p>
   <%= link_to "Edit", edit_hotel_path(@hotel) %> |
   <%= link_to "Destroy", @hotel, :confirm => 'Are you sure?', :method => :delete %> |
