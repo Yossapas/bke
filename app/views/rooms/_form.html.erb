@@ -1,0 +1,8 @@
+<%= form_for @room do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :room_type_id %><br />
+    <%= f.select(:room_type_id, RoomType.all.collect {|room_type| [ room_type.id, room_type.id ] }, { :include_blank => true }) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

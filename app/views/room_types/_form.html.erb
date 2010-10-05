@@ -1,0 +1,36 @@
+<%= form_for @room_type do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :cable_tv %><br />
+    <%= f.check_box :cable_tv %>
+  </p>
+  <p>
+    <%= f.label :bed_type %><br />
+    <%= f.text_field :bed_type %>
+  </p>
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.label :kitchen %><br />
+    <%= f.check_box :kitchen %>
+  </p>
+  <p>
+    <%= f.label :bathtub %><br />
+    <%= f.check_box :bathtub %>
+  </p>
+  <p>
+    <%= f.label :hotel_id %><br />
+    <%= f.select(:hotel_id, Hotel.all.collect {|hotel| [ hotel.name, hotel.id ] }, { :include_blank => true }) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,36 @@
+<% title "Book" %>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @book.fullname %>
+</p>
+<p>
+  <strong>Lastname:</strong>
+  <%= @book.lastname %>
+</p>
+<p>
+  <strong>Check In Date:</strong>
+  <%= @book.check_in_date %>
+</p>
+<p>
+  <strong>Check Out Date:</strong>
+  <%= @book.check_out_date %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @book.email %>
+</p>
+<p>
+  <strong>Mobile:</strong>
+  <%= @book.mobile %>
+</p>
+<p>
+  <strong>Extrabed:</strong>
+  <%= @book.extrabed %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_book_path(@book) %> |
+  <%= link_to "Destroy", @book, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", books_path %>
+</p>

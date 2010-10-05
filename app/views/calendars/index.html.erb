@@ -1,0 +1,21 @@
+<% title "Calendars" %>
+
+<table>
+  <tr>
+    <th>Start Available Date</th>
+    <th>End Available Date</th>
+    <th>Room</th>
+  </tr>
+  <% for calendar in @calendars %>
+    <tr>
+      <td><%= calendar.start_available_date %></td>
+      <td><%= calendar.end_available_date %></td>
+      <td><%= calendar.room_id %></td>
+      <td><%= link_to "Show", calendar %></td>
+      <td><%= link_to "Edit", edit_calendar_path(calendar) %></td>
+      <td><%= link_to "Destroy", calendar, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Calendar", new_calendar_path %></p>

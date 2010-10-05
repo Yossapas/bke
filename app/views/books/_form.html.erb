@@ -1,0 +1,32 @@
+<%= form_for @book do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :fullname %><br />
+    <%= f.text_field :fullname %>
+  </p>
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :check_in_date %><br />
+    <%= f.datetime_select :check_in_date %>
+  </p>
+  <p>
+    <%= f.label :check_out_date %><br />
+    <%= f.datetime_select :check_out_date %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </p>
+  <p>
+    <%= f.label :extrabed %><br />
+    <%= f.check_box :extrabed %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

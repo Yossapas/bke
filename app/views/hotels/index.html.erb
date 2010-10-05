@@ -1,0 +1,27 @@
+<% title "Hotels" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Star</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Fax</th>
+  </tr>
+  <% for hotel in @hotels %>
+    <tr>
+      <td><%= hotel.name %></td>
+      <td><%= hotel.star %></td>
+      <td><%= hotel.address %></td>
+      <td><%= hotel.email %></td>
+      <td><%= hotel.phone %></td>
+      <td><%= hotel.fax %></td>
+      <td><%= link_to "Show", hotel %></td>
+      <td><%= link_to "Edit", edit_hotel_path(hotel) %></td>
+      <td><%= link_to "Destroy", hotel, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Hotel", new_hotel_path %></p>

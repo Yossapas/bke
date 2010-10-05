@@ -1,0 +1,40 @@
+<% title "Room Type" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @room_type.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @room_type.description %>
+</p>
+<p>
+  <strong>Cable Tv:</strong>
+  <%= @room_type.cable_tv %>
+</p>
+<p>
+  <strong>Bed Type:</strong>
+  <%= @room_type.bed_type %>
+</p>
+<p>
+  <strong>Cost:</strong>
+  <%= @room_type.cost %>
+</p>
+<p>
+  <strong>Kitchen:</strong>
+  <%= @room_type.kitchen %>
+</p>
+<p>
+  <strong>Bathtub:</strong>
+  <%= @room_type.bathtub %>
+</p>
+<p>
+  <strong>Hotel:</strong>
+  <%= @room_type.hotel_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_room_type_path(@room_type) %> |
+  <%= link_to "Destroy", @room_type, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", room_types_path %>
+</p>

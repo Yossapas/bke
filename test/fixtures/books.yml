@@ -1,0 +1,17 @@
+one:
+  fullname: MyString
+  lastname: MyString
+  check_in_date: 2010-10-02 03:50:32
+  check_out_date: 2010-10-02 03:50:32
+  email: MyString
+  mobile: MyString
+  extrabed: false
+
+two:
+  fullname: MyString
+  lastname: MyString
+  check_in_date: 2010-10-02 03:50:32
+  check_out_date: 2010-10-02 03:50:32
+  email: MyString
+  mobile: MyString
+  extrabed: false

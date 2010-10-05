@@ -1,0 +1,19 @@
+one:
+  title: MyString
+  description: MyText
+  cable_tv: false
+  bed_type: MyString
+  cost: MyString
+  kitchen: false
+  bathtub: false
+  hotel_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  cable_tv: false
+  bed_type: MyString
+  cost: MyString
+  kitchen: false
+  bathtub: false
+  hotel_id: 1

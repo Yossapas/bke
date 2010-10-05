@@ -1,0 +1,31 @@
+<% title "Gallery" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery.name %>
+</p>
+<p>
+  <strong>Galleriable:</strong>
+  <%= @gallery.galleriable_id %>
+</p>
+<p>
+  <strong>Galleriable Type:</strong>
+  <%= @gallery.galleriable_type %>
+</p>
+
+
+<h3>Photo:</h3>
+<% @gallery.gallery_items.each do |gallery_item| %>
+
+  <%= image_tag gallery_item.photo.url(:small) %>
+ 
+<%end%>
+<hr />
+
+<%= render :partial => '/gallery_items/form.html.erb' %>
+
+<p>
+  <%= link_to "Edit", edit_gallery_path(@gallery) %> |
+  <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", galleries_path %>
+</p>

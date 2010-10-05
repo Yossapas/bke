@@ -1,0 +1,29 @@
+<% title "Books" %>
+
+<table>
+  <tr>
+    <th>Fullname</th>
+    <th>Lastname</th>
+    <th>Check In Date</th>
+    <th>Check Out Date</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Extrabed</th>
+  </tr>
+  <% for book in @books %>
+    <tr>
+      <td><%= book.fullname %></td>
+      <td><%= book.lastname %></td>
+      <td><%= book.check_in_date %></td>
+      <td><%= book.check_out_date %></td>
+      <td><%= book.email %></td>
+      <td><%= book.mobile %></td>
+      <td><%= book.extrabed %></td>
+      <td><%= link_to "Show", book %></td>
+      <td><%= link_to "Edit", edit_book_path(book) %></td>
+      <td><%= link_to "Destroy", book, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Book", new_book_path %></p>

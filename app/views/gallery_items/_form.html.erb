@@ -1,0 +1,10 @@
+<%= form_for @gallery_item, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>  
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+  <p><%= f.submit %></p>
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :gallery_id %>
+<% end %>

@@ -1,0 +1,52 @@
+<% title "Restaurant" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+<p>
+  <strong>Star:</strong>
+  <%= @restaurant.star %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @restaurant.description %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @restaurant.email %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @restaurant.phone %>
+</p>
+<p>
+  <strong>Fax:</strong>
+  <%= @restaurant.fax %>
+</p>
+
+<% if @restaurant.gallery %>
+
+  <% @restaurant.gallery.gallery_items.each do |gallery_item| %>
+    <%= image_tag gallery_item.photo.url(:small) %>
+  <% end %>
+  
+  <h4>Add Photo</h4>
+  <%= render :partial => '/gallery_items/form.html.erb' %>
+  
+<% else %>
+
+  <h3>Create Your Gallery</h3>
+  <%= render :partial => '/galleries/form.html.erb' %>
+  
+<% end %>
+
+<p>
+  <%= link_to "Edit", edit_restaurant_path(@restaurant) %> |
+  <%= link_to "Destroy", @restaurant, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", restaurants_path %>
+</p>
