@@ -1,4 +1,4 @@
-1286278271
+1286356953
 AddAttachmentPhotoToGalleryItem	/home/phuketschool/dev/ror/bke/db/migrate/20101002130424_add_attachment_photo_to_gallery_item.rb	class AddAttachmentPhotoToGalleryItem 
 Application	/home/phuketschool/dev/ror/bke/config/application.rb	  class Application 
 ApplicationController	/home/phuketschool/dev/ror/bke/app/controllers/application_controller.rb	class ApplicationController 
